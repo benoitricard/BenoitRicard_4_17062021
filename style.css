@@ -651,7 +651,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #575757;
 }
 
 .container {
@@ -690,9 +690,13 @@ p {
     font-family: "Open Sans";
 }
 
+.btn-contact {
+    color: #414141!important;
+}
+
 .cta-hero {
     margin-top: 22px;
-    color: #FFFFFF!important;
+    color: #FFFFFF;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -702,11 +706,50 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+} 
+
+.titre-footer, .icon-color {
+    color: #414141!important;
+}
+
+.quotation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.quotation > p {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+q {
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.titre-services {
+    margin-bottom: 30px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500!important;
+    text-transform: none!important;
+}
+
+.titre-portfolio {
+    text-align: center;
+    font-weight: 500!important;
+    text-transform: none!important;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333333!important;
 }
 
 h3 {
@@ -736,7 +779,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color: #FFFFFF;
 }
 
 .portfolio-thumb {
@@ -774,18 +817,22 @@ h4 {
     background-color: #F3976C;
 }
 
+.text-whatdo {
+    color: #414141!important;
+}
+
 .tc-white {
     color: #F3976C!important;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #FFFFFF;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background: #F4AA86!important;
+    color: #414141!important;
 }
 
 .ltc-white {
@@ -822,7 +869,7 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
