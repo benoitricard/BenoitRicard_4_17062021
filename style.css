@@ -7,16 +7,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.logo-header {
-    width: 276px;
-    height: 51px;
-}
-
-.logo-pres {
-    width: 100px;
-    height: 100px;
-}
-
 a,
 button {
     transition: all .3s ease-in-out;
@@ -88,6 +78,21 @@ a:hover {
 
 .bg-t-edge {
     background: top no-repeat;
+}
+
+.bloc-bg-texture::before {
+    content: "";
+    background-size: 2px 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.texture-paper::before {
+    background: url("img/texture-paper.png");
+    background-size: 280px 280px;
 }
 
 .b-parallax {
@@ -646,7 +651,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757;
+    color: #575757!important;
 }
 
 .container {
@@ -685,13 +690,9 @@ p {
     font-family: "Open Sans";
 }
 
-.btn-contact {
-    color: #414141!important;
-}
-
 .cta-hero {
     margin-top: 22px;
-    color: #FFFFFF;
+    color: #FFFFFF!important;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
@@ -701,51 +702,11 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
-} 
-
-.titre-footer, .icon-color {
-    color: #414141!important;
-}
-
-.quotation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.quotation > p {
-    margin-top: 5px;
-    font-size: 15px;
-}
-
-q {
-    margin-top: 30px;
-    font-size: 18px;
-    text-align: center;
-    color: black;
-}
-
-.titre-services {
-    margin-bottom: 30px;
-    font-size: 25px;
-    text-align: center;
-    font-weight: 500!important;
-    text-transform: none!important;
-}
-
-.titre-portfolio {
-    text-align: center;
-    font-weight: 500!important;
-    text-transform: none!important;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.4em;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #333333!important;
 }
 
 h3 {
@@ -775,7 +736,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF;
+    color: #FFFFFF!important;
 }
 
 .portfolio-thumb {
@@ -813,22 +774,18 @@ h4 {
     background-color: #F3976C;
 }
 
-.text-whatdo {
-    color: #414141!important;
-}
-
 .tc-white {
     color: #F3976C!important;
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF;
+    color: #FFFFFF!important;
 }
 
 .btn-atomic-tangerine:hover {
-    background: #F4AA86!important;
-    color: #414141!important;
+    background: #c27956!important;
+    color: #FFFFFF!important;
 }
 
 .ltc-white {
@@ -852,12 +809,20 @@ h4 {
     border-color: #364577!important;
 }
 
+.bg-dots-bg {
+    background-image: url("img/dots-bg.png");
+}
+
+.bg-lines-h2-bg {
+    background-image: url("img/lines-h2-bg.png");
+}
+
 .bg-banniere {
     background-image: url("img/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.jpg");
+    background-image: url("img/image-de-presentation.bmp");
 }
 
 @media (max-width: 1024px) {
@@ -883,13 +848,13 @@ h4 {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -907,6 +872,10 @@ h4 {
         overflow-x: hidden;
         position: relative;
     }
+    .bloc {
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
+    }
     .bloc-group,
     .bloc-group .bloc {
         display: block;
@@ -915,6 +884,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
+        padding-left: constant(safe-area-inset-left);
+        padding-right: constant(safe-area-inset-right);
     }
 }
 
